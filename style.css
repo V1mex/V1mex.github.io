@@ -1,0 +1,559 @@
+/* ==========================================================================
+   Загальні стилі та налаштування
+   ========================================================================== */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Фоновий колір сторінки */
+    color: #333; /* Основний колір тексту */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Для притискання футера */
+}
+
+.page-container {
+    flex: 1; /* Дозволяє зайняти доступний простір */
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px; /* Обмеження максимальної ширини */
+}
+
+a {
+    color: #0056b3; /* Колір посилань */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #003366; /* Колір посилань при наведенні */
+    text-decoration: underline;
+}
+
+h1 {
+    color: #003366;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2em;
+}
+
+h2 {
+    color: #003366; /* Колір підзаголовків секцій */
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+h3 {
+    color: #0056b3; /* Колір менших підзаголовків */
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+p {
+   line-height: 1.6;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: #fff; /* Фон для секцій контенту */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тінь для секцій */
+}
+
+/* ==========================================================================
+   Стилі для плейсхолдерів незавантажених зображень
+   ========================================================================== */
+img {
+    display: block;
+    object-fit: cover;
+    /* Стилізація блоку, коли src не знайдено */
+    background-color: #e0e0e0;
+    border: 1px dashed #cccccc;
+    /* Стилізація alt тексту */
+    color: #888888;
+    text-align: center;
+    font-size: 0.9em;
+    font-weight: bold;
+    /* Додайте розміри для кожного конкретного класу нижче */
+}
+
+/* Розміри та специфічні стилі для плейсхолдерів */
+.logo-img {
+    height: 50px;
+    width: 80px;
+    line-height: 50px;
+    background-color: #003366;
+    color: #ffffff;
+    border: 1px solid #0056b3;
+    margin-right: 15px; /* Відступ лого від назви */
+}
+
+.hero-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    max-height: 400px;
+    line-height: 10em; /* Приблизно */
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+}
+
+.news-image {
+    width: 100%;
+    height: 180px;
+    line-height: 180px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.team-image {
+    /* Стилі flex з .overview-content */
+    width: 300px;
+    height: 200px;
+    line-height: 200px;
+    border-radius: 8px;
+    flex-shrink: 0; /* Щоб зображення не стискалося */
+}
+
+.info-image {
+    height: 250px;
+    width: 100%; /* Займає ширину flex-контейнера */
+    max-width: 400px;
+    line-height: 250px;
+    border-radius: 8px;
+    /* Розміри також контролюються .info-block flex властивостями */
+}
+
+.player-photo {
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 180px;
+    line-height: 180px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.gallery-image:hover {
+    transform: scale(1.05);
+     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+
+/* ==========================================================================
+   Шапка сайту (Header)
+   ========================================================================== */
+.site-header {
+    background-color: #003366; /* Темно-синій */
+    color: #fff;
+    padding: 10px 0; /* Зменшено падінг */
+    border-bottom: 3px solid #ffcc00; /* Акцентний жовтий */
+    position: sticky; /* Можна зробити хедер "липким" */
+    top: 0;
+    z-index: 100; /* Щоб був поверх контенту */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #fff;
+    border: none; /* Забираємо лінію під h1 в хедері */
+    text-align: left; /* Вирівнювання для лого */
+}
+
+/* ==========================================================================
+   Навігація (Navigation)
+   ========================================================================== */
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-nav li {
+    margin-left: 20px;
+}
+
+.main-nav a {
+    color: #fff;
+    font-size: 1.1em;
+    padding: 8px 15px; /* Збільшено падінг */
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: #ffcc00; /* Жовтий фон для активного/ховеру */
+    color: #003366; /* Темний текст на жовтому фоні */
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   Основний контент (Main Content)
+   ========================================================================== */
+.main-content {
+    padding: 30px 0; /* Збільшено відступ */
+    flex-grow: 1;
+}
+
+/* Стилі для Головної сторінки (index.html) */
+.hero-section {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #e9ecef;
+    margin-bottom: 30px; /* Додано відступ знизу */
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* Збільшено проміжок */
+}
+
+.news-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease;
+}
+.news-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.news-item h3 {
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    flex-grow: 1;
+    margin-bottom: 15px;
+}
+
+.news-item a {
+    display: inline-block;
+    background-color: #0056b3;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-align: center;
+    align-self: flex-start; /* Кнопка не розтягується */
+}
+.news-item a:hover {
+    background-color: #003366;
+    text-decoration: none;
+}
+
+.overview-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+
+/* Стилі для сторінки "Про нас" (about.html) */
+.club-info {
+    margin-bottom: 40px;
+}
+
+.info-block {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+    align-items: flex-start; /* Вирівнювання по верху */
+    /* Фон та тінь вже застосовуються через 'section', тому тут не потрібні */
+}
+
+.info-block.goals {
+   flex-direction: row-reverse; /* Зображення праворуч у другому блоці */
+}
+
+.info-text {
+    flex: 2 1 400px; /* Текст займає більше місця */
+}
+
+.info-text ul {
+    list-style: disc;
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+.players-section h2,
+.staff-section h2 {
+    /* Стилі для h2 вже є, можна додати специфічні, якщо потрібно */
+}
+
+.players-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.player-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.player-card p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+
+/* Стилі для сторінки "Досягнення" (achievements.html) */
+.intro-text {
+    font-size: 1.1em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.achievements-list h2,
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.achievement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px; /* Збільшено проміжок */
+    border-bottom: 1px solid #eee;
+    padding: 25px 0; /* Збільшено падінг */
+}
+
+.achievement-item:last-child {
+    border-bottom: none;
+}
+
+.achievement-icon {
+    font-size: 2.5em;
+    color: #ffcc00; /* Жовтий для іконок */
+    flex-shrink: 0;
+    width: 50px;
+    text-align: center;
+    margin-top: 5px; /* Невеликий відступ зверху для кращого вирівнювання */
+}
+
+.achievement-icon .fas { /* Font Awesome іконки */
+    line-height: 1;
+}
+
+.achievement-details h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.3em;
+}
+
+.achievement-year {
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 10px;
+    font-size: 0.9em; /* Трохи менший рік */
+}
+
+.achievement-details p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.gallery-section p {
+     margin-bottom: 20px;
+     color: #555;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+/* ==========================================================================
+   Футер (Footer)
+   ========================================================================== */
+.site-footer {
+    background-color: #333; /* Темний фон футера */
+    color: #ccc; /* Світліший текст у футері */
+    text-align: center;
+    padding: 25px 0; /* Збільшено падінг */
+    margin-top: auto; /* Притискає футер до низу */
+    font-size: 0.9em;
+}
+
+/* ==========================================================================
+   Адаптивність (Media Queries)
+   ========================================================================== */
+
+/* Середні пристрої (≥992px) - Планшети в альбомній орієнтації, невеликі ноутбуки */
+@media (min-width: 992px) {
+    .container {
+        width: 85%;
+    }
+    .news-grid {
+         grid-template-columns: repeat(3, 1fr); /* 3 колонки новин */
+    }
+    .players-grid {
+         grid-template-columns: repeat(4, 1fr); /* 4 колонки гравців */
+    }
+    .gallery-grid {
+         grid-template-columns: repeat(4, 1fr); /* 4 колонки в галереї */
+    }
+}
+
+/* Великі пристрої (≥1200px) - Стандартні настільні монітори */
+@media (min-width: 1200px) {
+    .container {
+        width: 80%; /* Трохи вужчий контейнер */
+        max-width: 1140px; /* Стандартний bootstrap розмір */
+    }
+     .hero-image {
+        /* Можна трохи зменшити відносну висоту */
+        /* aspect-ratio: 21 / 9; */
+    }
+}
+
+/* Малі пристрої (<768px) - Планшети в портретній, телефони */
+@media (max-width: 767.98px) {
+     .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Проміжок між лого та навігацією */
+    }
+     .main-nav ul {
+        flex-direction: column; /* Навігація стовпчиком */
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+     .main-nav li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+     .main-nav a {
+         display: block; /* Посилання на всю ширину */
+         padding: 10px;
+     }
+
+    .logo h1 {
+        font-size: 1.6em;
+    }
+
+     .overview-content {
+       flex-direction: column; /* Зображення над текстом */
+        align-items: center;
+    }
+    .team-image {
+        width: 80%; /* Ширше зображення команди */
+        max-width: 400px;
+        margin-bottom: 15px;
+        height: auto; /* Автоматична висота */
+        aspect-ratio: 3/2; /* Зберігаємо пропорції */
+        line-height: normal; /* Скидаємо для авто висоти */
+    }
+
+     .info-block,
+     .info-block.goals {
+        flex-direction: column; /* Зображення над текстом */
+        align-items: center; /* Центрування контенту */
+    }
+    .info-image {
+        max-width: 80%; /* Зображення може бути ширшим */
+        margin-bottom: 20px;
+        height: auto; /* Автоматична висота */
+        aspect-ratio: 16 / 10; /* Зберігаємо пропорції */
+        line-height: normal;
+    }
+    .info-text {
+       width: 100%; /* Текст на всю ширину */
+    }
+
+    .achievement-item {
+        flex-direction: column; /* Іконка над текстом */
+        align-items: center; /* Центрування */
+        text-align: center;
+        gap: 10px;
+    }
+     .achievement-icon {
+        margin-bottom: 10px;
+        width: auto; /* Скидаємо фіксовану ширину */
+    }
+
+    .gallery-grid {
+         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .gallery-image {
+        height: 120px;
+        line-height: 120px;
+    }
+}
+
+/* Дуже малі пристрої (<576px) - Телефони */
+@media (max-width: 575.98px) {
+    h1 { font-size: 1.8em; }
+    h2 { font-size: 1.4em; }
+    h3 { font-size: 1.1em; }
+
+    .container {
+        width: 95%; /* Ще ширше на малих екранах */
+    }
+    .players-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Або 1 колонка */
+        /* grid-template-columns: 1fr; */
+    }
+    .player-photo {
+        width: 120px;
+        height: 120px;
+        line-height: 120px;
+    }
+     .gallery-grid {
+         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+     .gallery-image {
+        height: 100px;
+        line-height: 100px;
+    }
+}
