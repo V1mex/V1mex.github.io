@@ -12,10 +12,10 @@
         <header class="site-header">
             <div class="container header-content">
                 <div class="logo">
-                    <img src="https://via.placeholder.com/80x50/003366/FFFFFF?text=Logo" alt="Логотип ФК Аргон" class="logo-img">
+                    <img src="https://via.placeholder.com/80x50/003366/FFFFFF?text=Logo" alt="Логотип" class="logo-img">
                     <h1>ФК "Аргон"</h1>
                 </div>
-                <nav class="main-nav">
+                <nav class="main-nav" id="nav">
                     <ul>
                         <li><a href="index.html" class="active">Головна</a></li>
                         <li><a href="2.html">Про нас</a></li>
@@ -23,6 +23,7 @@
                         <li><a href="stats.html">Статистика</a></li>
                     </ul>
                 </nav>
+                <button class="burger" id="burger">&#9776;</button>
             </div>
         </header>
 
@@ -72,5 +73,11 @@
             </div>
         </footer>
     </div>
+    <script>
+    document.getElementById("burger").addEventListener("click", function () {
+        document.getElementById("nav").classList.toggle("open");
+    });
+</script>
+
 </body>
 </html>

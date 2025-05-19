@@ -1,6 +1,6 @@
 /* ==========================================================================
- *  Загальні стилі та налаштування
- *  ========================================================================== */
+   Загальні стилі та налаштування
+   ========================================================================== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -59,7 +59,7 @@ h3 {
 }
 
 p {
-    line-height: 1.6;
+   line-height: 1.6;
 }
 
 section {
@@ -71,8 +71,8 @@ section {
 }
 
 /* ==========================================================================
- *  Стилі для плейсхолдерів незавантажених зображень
- *  ========================================================================== */
+   Стилі для плейсхолдерів незавантажених зображень
+   ========================================================================== */
 img {
     display: block;
     object-fit: cover;
@@ -153,13 +153,13 @@ img {
 }
 .gallery-image:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 
 /* ==========================================================================
- *  Шапка сайту (Header)
- *  ========================================================================== */
+   Шапка сайту (Header)
+   ========================================================================== */
 .site-header {
     background-color: #003366; /* Темно-синій */
     color: #fff;
@@ -190,8 +190,8 @@ img {
 }
 
 /* ==========================================================================
- *  Навігація (Navigation)
- *  ========================================================================== */
+   Навігація (Navigation)
+   ========================================================================== */
 .main-nav ul {
     list-style: none;
     padding: 0;
@@ -219,8 +219,8 @@ img {
 }
 
 /* ==========================================================================
- *  Основний контент (Main Content)
- *  ========================================================================== */
+   Основний контент (Main Content)
+   ========================================================================== */
 .main-content {
     padding: 30px 0; /* Збільшено відступ */
     flex-grow: 1;
@@ -298,7 +298,7 @@ img {
 }
 
 .info-block.goals {
-    flex-direction: row-reverse; /* Зображення праворуч у другому блоці */
+   flex-direction: row-reverse; /* Зображення праворуч у другому блоці */
 }
 
 .info-text {
@@ -401,8 +401,8 @@ img {
 }
 
 .gallery-section p {
-    margin-bottom: 20px;
-    color: #555;
+     margin-bottom: 20px;
+     color: #555;
 }
 
 .gallery-grid {
@@ -412,8 +412,8 @@ img {
 }
 
 /* ==========================================================================
- *  Футер (Footer)
- *  ========================================================================== */
+   Футер (Footer)
+   ========================================================================== */
 .site-footer {
     background-color: #333; /* Темний фон футера */
     color: #ccc; /* Світліший текст у футері */
@@ -424,8 +424,8 @@ img {
 }
 
 /* ==========================================================================
- *  Адаптивність (Media Queries)
- *  ========================================================================== */
+   Адаптивність (Media Queries)
+   ========================================================================== */
 
 /* Середні пристрої (≥992px) - Планшети в альбомній орієнтації, невеликі ноутбуки */
 @media (min-width: 992px) {
@@ -433,13 +433,13 @@ img {
         width: 85%;
     }
     .news-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 колонки новин */
+         grid-template-columns: repeat(3, 1fr); /* 3 колонки новин */
     }
     .players-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 колонки гравців */
+         grid-template-columns: repeat(4, 1fr); /* 4 колонки гравців */
     }
     .gallery-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 колонки в галереї */
+         grid-template-columns: repeat(4, 1fr); /* 4 колонки в галереї */
     }
 }
 
@@ -449,7 +449,7 @@ img {
         width: 80%; /* Трохи вужчий контейнер */
         max-width: 1140px; /* Стандартний bootstrap розмір */
     }
-    .hero-image {
+     .hero-image {
         /* Можна трохи зменшити відносну висоту */
         /* aspect-ratio: 21 / 9; */
     }
@@ -457,33 +457,33 @@ img {
 
 /* Малі пристрої (<768px) - Планшети в портретній, телефони */
 @media (max-width: 767.98px) {
-    .header-content {
+     .header-content {
         flex-direction: column;
         align-items: center;
         gap: 10px; /* Проміжок між лого та навігацією */
     }
-    .main-nav ul {
+     .main-nav ul {
         flex-direction: column; /* Навігація стовпчиком */
         align-items: center;
         width: 100%;
         margin-top: 10px;
     }
-    .main-nav li {
+     .main-nav li {
         margin: 5px 0;
         width: 100%;
         text-align: center;
     }
-    .main-nav a {
-        display: block; /* Посилання на всю ширину */
-        padding: 10px;
-    }
+     .main-nav a {
+         display: block; /* Посилання на всю ширину */
+         padding: 10px;
+     }
 
     .logo h1 {
         font-size: 1.6em;
     }
 
-    .overview-content {
-        flex-direction: column; /* Зображення над текстом */
+     .overview-content {
+       flex-direction: column; /* Зображення над текстом */
         align-items: center;
     }
     .team-image {
@@ -495,8 +495,8 @@ img {
         line-height: normal; /* Скидаємо для авто висоти */
     }
 
-    .info-block,
-    .info-block.goals {
+     .info-block,
+     .info-block.goals {
         flex-direction: column; /* Зображення над текстом */
         align-items: center; /* Центрування контенту */
     }
@@ -508,7 +508,7 @@ img {
         line-height: normal;
     }
     .info-text {
-        width: 100%; /* Текст на всю ширину */
+       width: 100%; /* Текст на всю ширину */
     }
 
     .achievement-item {
@@ -517,13 +517,13 @@ img {
         text-align: center;
         gap: 10px;
     }
-    .achievement-icon {
+     .achievement-icon {
         margin-bottom: 10px;
         width: auto; /* Скидаємо фіксовану ширину */
     }
 
     .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
     .gallery-image {
         height: 120px;
@@ -549,16 +549,45 @@ img {
         height: 120px;
         line-height: 120px;
     }
-    .gallery-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+     .gallery-grid {
+         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
-    .gallery-image {
+     .gallery-image {
         height: 100px;
         line-height: 100px;
     }
 }
 
-/* Бургер-меню і адаптація для мобільних пристроїв */
+@media screen and (max-width: 481px) {
+    a, button, input, .main-nav a {
+        padding: 12px 18px;
+        font-size: 16px;
+    }
+
+    input, select, textarea {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    form {
+        max-width: 100%;
+    }
+
+    section, .news-item, .player-card {
+        margin-bottom: 20px;
+    }
+
+    .main-nav a {
+        border: 1px solid white;
+        margin-bottom: 8px;
+    }
+
+    .container {
+        padding: 0 5px;
+    }
+}
+
+/* Сховати бургер на великих екранах */
 .burger {
     display: none;
     background: none;
@@ -568,34 +597,14 @@ img {
     cursor: pointer;
 }
 
+/* На малих екранах – показати бургер, сховати меню */
 @media (max-width: 575.98px) {
     .burger {
         display: block;
         position: absolute;
-        top: 50%;
-        left: 10px; /* менше значення для "правіше" */
-        transform: translateY(-50%);
+        top: 10px;
+        right: 15px;
         z-index: 101;
-    }
-
-    .header-content {
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-    }
-
-    .logo {
-        padding-left: 40px;
-    }
-
-    .logo h1 {
-        font-size: 1.4em;
-        text-align: center;
-    }
-
-    .logo-img {
-        width: 60px;
-        height: 40px;
     }
 
     .main-nav {
@@ -626,35 +635,8 @@ img {
 
     .main-nav a {
         display: block;
-        padding: 8px 12px;
-        font-size: 14px;
-        border: 1px solid white;
-        margin: 4px auto;
-        max-width: 180px;
-        border-radius: 6px;
-    }
-
-
-    a, button, input, .main-nav a {
-        padding: 12px 18px;
+        padding: 12px 20px;
         font-size: 16px;
-    }
-
-    input, select, textarea {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    form {
-        max-width: 100%;
-    }
-
-    section, .news-item, .player-card {
-        margin-bottom: 20px;
-    }
-
-    .container {
-        padding: 0 5px;
-        width: 95%;
     }
 }
+
